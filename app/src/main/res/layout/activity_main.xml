@@ -8,11 +8,12 @@
     tools:context="com.smsverifiationapp.MainActivity">
 
    <EditText
+       android:imeOptions="actionDone"
        android:hint="Enter phone Number"
        android:layout_marginTop="16dp"
        android:id="@+id/et_ph_number"
        android:padding="8dp"
-       android:inputType="number"
+       android:inputType="numberPassword"
        android:layout_width="match_parent"
        android:layout_height="wrap_content" />
 
