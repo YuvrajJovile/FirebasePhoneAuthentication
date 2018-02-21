@@ -52,7 +52,7 @@
 
     <Button
         android:id="@+id/bt_status"
-        android:text="Login Staus"
+        android:text="Login Status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

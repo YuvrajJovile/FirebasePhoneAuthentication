@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private EditText etPhoneNumber, etOtp;
     private Button btSendOtp, btVerify, btResend, btSignOut, btLoginStatus;
-    private FirebaseAuth auth;
+    private FirebaseAuth auth = FirebaseAuth.getInstance();
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     private String verificationCode = null;
     private String numberString;
@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void init() {
 
-        auth = FirebaseAuth.getInstance();
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
             public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
@@ -62,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onVerificationFailed(FirebaseException e) {
+                Toast.makeText(MainActivity.this, ""+e.getMessage(), Toast.LENGTH_SHORT).show();
 
             }
 
@@ -114,9 +114,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void loginStatusFunc() {
-        if(auth.getCurrentUser()!=null){
+        if (auth.getCurrentUser() != null) {
             Toast.makeText(this, "User is active", Toast.LENGTH_SHORT).show();
-        }else {
+        } else {
             Toast.makeText(this, "User is Inactive", Toast.LENGTH_SHORT).show();
 
         }
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         numberString = etPhoneNumber.getText().toString().trim();
         if (numberString != null) {
-            PhoneAuthProvider.getInstance().verifyPhoneNumber("+91" + numberString, 120, TimeUnit.SECONDS, this, mCallbacks);
+            PhoneAuthProvider.getInstance().verifyPhoneNumber("+91" + numberString, 60, TimeUnit.SECONDS, this, mCallbacks);
         }
     }
 
