@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth auth = FirebaseAuth.getInstance();
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     private String verificationCode = null;
-    private String numberString;
+    private String numberString = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
