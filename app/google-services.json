@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "60930963343",
+    "firebase_url": "https://smsverification-3fdea.firebaseio.com",
+    "project_id": "smsverification-3fdea",
+    "storage_bucket": "smsverification-3fdea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60930963343:android:279200f8da045081",
+        "android_client_info": {
+          "package_name": "com.smsverifiationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60930963343-of4m5ml8gtkvktau9ee7lfqe92qgit0h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLXfh2UU0hxlcLEZmvuMVAtlWLucFMwkg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
